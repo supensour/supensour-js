@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "noImplicitAny": true,
+    "target": "ES5",
+    "module": "ES2015",
+    "moduleResolution": "Node",
+    "sourceMap": true
+  }
+}
