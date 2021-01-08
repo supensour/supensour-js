@@ -3,5 +3,6 @@ const { merge } = require('webpack-merge')
 
 module.exports = merge(base, {
   name: 'test',
-  mode: 'development'
+  mode: 'development',
+  devtool: 'eval-cheap-module-source-map',
 })

@@ -1,5 +1,4 @@
 const config = require('./envs')
-const ForkTsCheckerWebpackPlugin = require( 'fork-ts-checker-webpack-plugin' );
 const path = require('path')
 const { merge } = require('webpack-merge')
 
@@ -25,13 +24,9 @@ const webpackConfig = {
           }
         },
         exclude: /node_modules/,
-
       }
     ]
-  },
-  plugins: [
-      new ForkTsCheckerWebpackPlugin()
-  ]
+  }
 }
 
 module.exports = merge(webpackConfig, config)

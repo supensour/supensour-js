@@ -6,8 +6,8 @@
     },
     "noImplicitAny": true,
     "target": "ES5",
-    "module": "ES2015",
-    "moduleResolution": "Node",
+    "module": "commonjs",
+    "declaration": true,
     "sourceMap": true
   }
 }

@@ -1,0 +1,7 @@
+.idea
+config
+scripts
+src
+test
+.travis.yml
+tsconfig.json
