@@ -28,6 +28,5 @@ build/
 ### Project ###
 /dist
 /docs/dist
-/module/dist
-/node_modules
+node_modules
 *local-only.*

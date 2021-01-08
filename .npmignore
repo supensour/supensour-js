@@ -1,9 +1,9 @@
 .idea
-config
 docs
-module
 scripts
-.browserlistrc
+src
+test
 .editorconfig
 .travis.yml
 babel.config.js
+tsconfig.json

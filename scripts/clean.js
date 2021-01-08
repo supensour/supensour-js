@@ -7,7 +7,7 @@ function resolvePath(...pathParts) {
 }
 
 const dir = resolvePath(process.argv[2])
-spinner.start('Cleaning directory: ' + dir)
+spinner.start('Clean directory: ' + dir)
 rm(dir, {}, error => {
   if (error) {
     spinner.fail();
