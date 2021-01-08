@@ -1,4 +1,4 @@
-const base = require('./base')
+const base = require('./base.config')
 const ForkTsCheckerWebpackPlugin = require( 'fork-ts-checker-webpack-plugin' );
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const { merge } = require('webpack-merge')

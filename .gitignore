@@ -25,9 +25,7 @@ build/
 .vscode/
 *.log
 
-### Node ###
+### Project ###
 /dist
 /node_modules
-
-### Custom ###
 *local-only.*

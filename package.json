@@ -4,9 +4,9 @@
   "description": "JS Library",
   "main": "dist/index.js",
   "scripts": {
-    "clean": "cross-env NODE_ENV=production node scripts/clean",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack -c config/webpack.config.js",
-    "dev": "npm run clean && cross-env NODE_ENV=dev webpack serve -c config/webpack.config.js",
+    "clean": "node scripts/clean",
+    "build": "cross-env NODE_ENV=production npm run clean && webpack -c config/webpack.config.js",
+    "dev": "cross-env NODE_ENV=dev webpack serve -c config/webpack.config.js",
     "test": "jest"
   },
   "repository": {
