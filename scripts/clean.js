@@ -1,14 +1,16 @@
-const chalk = require('chalk')
-const config = require('../config/envs')
+const path = require('path')
 const spinner = require('ora')()
 const rm = require('rimraf')
 
-console.log(chalk.cyan('### Cleaning'))
+function resolvePath(...pathParts) {
+  return path.resolve(__dirname, '..', ...pathParts)
+}
 
-spinner.start('Cleaning output directory: ' + config.output.path + '\n')
-rm(config.output.path, {}, error => {
+const dir = resolvePath(process.argv[2])
+spinner.start('Cleaning directory: ' + dir)
+rm(dir, {}, error => {
   if (error) {
-    spinner.fail()
+    spinner.fail();
     throw error
   }
   spinner.succeed()

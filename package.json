@@ -3,11 +3,20 @@
   "version": "0.1.0",
   "description": "JS Library",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "clean": "node scripts/clean",
-    "build": "cross-env NODE_ENV=production npm run clean && webpack -c config/webpack.config.js",
-    "dev": "cross-env NODE_ENV=dev webpack serve -c config/webpack.config.js",
-    "test": "jest"
+    "prebuild:module": "node scripts/log title 3 \"Build module\" && node scripts/clean module/dist",
+    "build:module": "tsc --build module/tsconfig.json && npm run log:task:success \"Build module\" || (npm run log:task:failed \"Build module\" 1 && exit 1)",
+
+    "test:module": "jest",
+
+    "prebuild:docs": "node scripts/log 3 \"Build docs\" && node scripts/clean docs/dist",
+    "build:docs": "exit 0 && npm run log:task:success \"Build docs\" || (npm run log:task:failed \"Build docs\" && exit 1)",
+
+    "dev:docs": "webpack serve -c config/webpack/webpack.docs.dev.config.js",
+
+    "log:task:success": "node scripts/log task-success",
+    "log:task:failed": "node scripts/log task-failed"
   },
   "repository": {
     "type": "git",
@@ -24,9 +33,25 @@
     "url": "https://github.com/supensour/supensour-js/issues"
   },
   "homepage": "https://github.com/supensour/supensour-js#readme",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0"
+  },
   "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
     "chalk": "^4.1.0",
     "cross-env": "^7.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^7.0.0-0",
     "fork-ts-checker-webpack-plugin": "^6.0.8",
     "html-webpack-plugin": "^4.5.1",
     "ora": "^5.2.0",

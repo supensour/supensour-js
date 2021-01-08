@@ -19,7 +19,7 @@ export default class Optional<T> {
   }
 
   static empty<T>(): Optional<T> {
-    return new Optional(null)
+    return new Optional<T>(null)
   }
 
   static of<T>(value: T): Optional<T> {
@@ -114,5 +114,4 @@ export default class Optional<T> {
     return `Optional(${this.value})`
   }
 
-  readonly prototype: Optional<T>
 }
