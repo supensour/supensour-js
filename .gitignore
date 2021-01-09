@@ -27,7 +27,6 @@ build/
 
 ### Project ###
 /dist
-/docs/dist
-/docs/vue.config.js
+/docs
 node_modules
 *local-only.*
