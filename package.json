@@ -7,7 +7,8 @@
   "scripts": {
     "build:module": "node scripts/build-module",
     "build:docs": "node scripts/build-docs",
-    "test:unit": "jest"
+    "test:unit": "jest --config test/unit/jest.config.ts --coverage",
+    "sonar:prepare": "node scripts/sonar-prepare"
   },
   "repository": {
     "type": "git",
@@ -26,9 +27,14 @@
   },
   "homepage": "https://github.com/supensour/supensour-js#readme",
   "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.20",
     "chalk": "^4.1.0",
     "fs-extra": "^9.0.1",
+    "jest": "^26.6.3",
     "ora": "^5.2.0",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.1.1",
     "typedoc": "^0.20.13",
     "typescript": "^4.1.3"
   }

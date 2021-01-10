@@ -308,7 +308,7 @@ export class Optional<T> {
    * if the given mapper is not a function
    */
   map<R>(mapper: MapperFunction<T, R>): Optional<R> {
-    validateFunction(mapper)
+    validateFunction(mapper, 'The given mapper is not a function')
     return this.isPresent() ? new Optional<R>(mapper(this.value)) : Optional.empty()
   }
 
@@ -338,7 +338,7 @@ export class Optional<T> {
    * if the given supplier is not a function or doesn't return an Optional
    */
   or(supplier: SupplierFunction<Optional<T>>): Optional<T> {
-    validateFunction(supplier)
+    validateFunction(supplier, 'The given supplier is not a function')
     if (this.isPresent()) {
       return this
     }
@@ -389,7 +389,7 @@ export class Optional<T> {
    * if the given supplier is not a function
    */
   orElseGet(supplier: SupplierFunction<T>): T {
-    validateFunction(supplier)
+    validateFunction(supplier, 'The given supplier is not a function')
     return this.isPresent() ? this.value : supplier()
   }
 
@@ -416,7 +416,7 @@ export class Optional<T> {
    * if no value is present
    */
   orElseThrow<E extends Error>(errorSupplier: SupplierFunction<E>): T {
-    validateFunction(errorSupplier())
+    validateFunction(errorSupplier, 'The given error supplier is not a function')
     if (this.isPresent()) {
       return this.value
     }

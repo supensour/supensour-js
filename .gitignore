@@ -28,6 +28,8 @@ build/
 ### Project ###
 /dist
 /docs
+/test/unit/coverage
 node_modules
+sonar-project.properties
 /typedoc.json
 *local-only.*

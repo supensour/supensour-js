@@ -5,6 +5,8 @@ scripts
 src
 test
 .editorconfig
+sonar-project.properties
+sonar-project.template.properties
 tsconfig.json
 typedoc.template.js
 typedoc.json
