@@ -15,7 +15,7 @@ jobs:
       matrix:
         node-version: [14.x, 15.x]
     steps:
-      - uses: action/checkout@v2
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - name: Setup Node.js ${{ matrix.node-version }}
@@ -26,6 +26,8 @@ jobs:
         run: npm ci
       - name: Unit Test
         run: npm run test:unit
+      - name: Prepare Sonar Scan
+        run: npm run sonar:prepare
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
