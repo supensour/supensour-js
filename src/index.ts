@@ -1,3 +1,1 @@
-export default {
-  Optional: import('@/libs/optional')
-}
+export * as util from '@/util'

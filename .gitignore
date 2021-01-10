@@ -29,4 +29,5 @@ build/
 /dist
 /docs
 node_modules
+/typedoc.json
 *local-only.*

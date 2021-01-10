@@ -1,9 +1,10 @@
+.github
 .idea
 docs
 scripts
 src
 test
 .editorconfig
-.travis.yml
-babel.config.js
 tsconfig.json
+typedoc.template.js
+typedoc.json
