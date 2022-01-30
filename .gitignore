@@ -19,17 +19,15 @@
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
 
 ### VS Code ###
 .vscode/
 *.log
 
 ### Project ###
-/dist
-/docs
-/test/unit/coverage
-node_modules
-sonar-project.properties
-/typedoc.json
-*local-only.*
+**/dist/
+**/dist-pub/
+**/test/unit/coverage/
+**/node_modules/
+**/sonar-project.properties
+**/*local-only.*
