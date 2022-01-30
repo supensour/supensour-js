@@ -1,0 +1,30 @@
+{
+  "name": "@supensour/eslint-plugin",
+  "version": "0.1.0",
+  "description": "Supensour eslint configs",
+  "main": "index.js",
+  "scripts": {
+    "build:package": "node build/scripts/build-package",
+    "predeploy:package": "node build/scripts/predeploy.js",
+    "deploy:package": "npm publish ./dist-pub"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supensour/supensour-js.git",
+    "directory": "packages/eslint-config"
+  },
+  "keywords": [
+    "supensour",
+    "supensour-js",
+    "library",
+    "eslint"
+  ],
+  "author": "Suprayan Yapura <SuprayanY@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supensour/supensour-js/issues"
+  },
+  "homepage": "https://github.com/supensour/supensour-js#readme",
+  "dependencies": {
+  }
+}
