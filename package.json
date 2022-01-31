@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "description": "Supensour javascript library root",
   "scripts": {
-    "build:module": "npm -ws run build:module",
+    "build:package": "npm -ws run build:package",
+    "deploy:package": "npm -ws run deploy:package",
     "lint:fix": "npm -ws run lint:fix",
     "lint:lint": "npm -ws run lint:lint",
     "sonar:prepare": "npm -ws run sonar:prepare",
@@ -15,12 +16,12 @@
     "url": "git+https://github.com/supensour/supensour-js.git"
   },
   "workspaces": [
+    "packages/eslint-plugin"
   ],
   "keywords": [
     "supensour",
     "supensour-js",
-    "library",
-    "optional"
+    "library"
   ],
   "author": "Suprayan Yapura <SuprayanY@yahoo.com>",
   "license": "MIT",
@@ -31,8 +32,11 @@
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^14.17.33",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
     "chalk": "^4.1.2",
     "eslint": "^8.8.0",
+    "eslint-plugin-vue": "^8.4.0",
     "fs-extra": "^10.0.0",
     "jest": "^26.6.3",
     "ora": "^5.4.1",

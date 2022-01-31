@@ -1,0 +1,49 @@
+{
+  "name": "@supensour/eslint-plugin",
+  "version": "0.1.0",
+  "description": "Supensour eslint configs",
+  "main": "index.js",
+  "scripts": {
+    "build:package": "node build/scripts/build-package",
+    "predeploy:package": "node build/scripts/predeploy.js",
+    "deploy:package": "npm publish ./dist-pub"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supensour/supensour-js.git",
+    "directory": "packages/eslint-config"
+  },
+  "keywords": [
+    "supensour",
+    "supensour-js",
+    "library",
+    "eslint"
+  ],
+  "author": "Suprayan Yapura <SuprayanY@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/supensour/supensour-js/issues"
+  },
+  "homepage": "https://github.com/supensour/supensour-js#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.8.0",
+    "eslint-plugin-vue": "^8.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@typescript-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "@typescript-eslint/parser": {
+      "optional": true
+    },
+    "eslint-plugin-vue": {
+      "optional": true
+    }
+  }
+}
